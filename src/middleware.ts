@@ -5,5 +5,6 @@ export const middleware = createNextAuthMiddleware({
 });
 
 export const config = {
-	matcher: ["/(.*)"], // Replace this with your own matcher logic
+	// Replace this with your own matcher logic
+	matcher: ["/(.*)"],
 };

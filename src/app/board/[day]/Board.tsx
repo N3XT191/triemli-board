@@ -5,9 +5,14 @@ const makeRoom = (room: Room | undefined) => {
 	if (room && room.person)
 		return (
 			<div className="flex w-full justify-between p-4 ">
-				<div className="flex ">
+				<div className="flex items-center">
 					<div className="w-[120px]">{room.person.title}</div>
 					<div>{room.person.name}</div>
+					{room.person.phone ? (
+						<div className="text-xl font-bold pl-[20px] pt-[2px]">
+							{room.person.phone}
+						</div>
+					) : undefined}
 				</div>
 				<div className="font-bold">{room.roomLabel}</div>
 			</div>

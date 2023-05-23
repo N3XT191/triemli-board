@@ -15,7 +15,7 @@ export default function BoardLayout({
 	const weekday = day.day();
 	return (
 		<main className="flex min-h-screen flex-col items-center justify-start p-6 text-3xl relative">
-			<div className="inline-grid grid-rows-[auto_auto_auto] grid-cols-2 gap-[20px] gap-x-[70px] min-w-[1100px]">
+			<div className="inline-grid grid-rows-[auto_auto_auto] grid-cols-2 gap-[20px] gap-x-[100px] min-w-[1200px]">
 				<div className="col-span-2  col-start-1 row-start-1   flex justify-center items-center flex-col ">
 					<h2 className="text-7xl font-extralight mb-2">Ambi Chirurgie</h2>
 					<div className="flex justify-between mb-4 mt-5">
