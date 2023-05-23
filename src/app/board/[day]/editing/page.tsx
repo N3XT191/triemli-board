@@ -56,6 +56,7 @@ export default function EditingBoard({ params }: { params?: { day: string } }) {
 			<div className="row-start-3  col-start-1  flex flex-col divide-y-2 divide-gray-300">
 				{makeSelector(true, roomData?.["tag"], "Tagesarzt", "tag")}
 				{makeSelector(true, roomData?.["hc"], "HC", "hc")}
+				{makeSelector(false, roomData?.["gz"]?.[0], "GZ", "gz")}
 			</div>
 			<div className="row-start-3  col-start-2  flex flex-col divide-y-2 divide-gray-300">
 				{makeSelector(false, roomData?.["e"][0], "Empfang", "e")}

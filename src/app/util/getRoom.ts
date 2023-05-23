@@ -16,7 +16,7 @@ export const getRoom = (date: string): Board | undefined => {
 	const rows = fileContents.split("\n");
 	const splitRows = rows.map((row) => row.split(","));
 
-	const board: Board = { tel: [] as Person[], e: [], sp: [], m: [] };
+	const board: Board = { tel: [] as Person[], e: [], sp: [], m: [], gz: [] };
 	splitRows.forEach((row) => {
 		switch (row[0]) {
 			case "1":
@@ -47,6 +47,7 @@ export const getRoom = (date: string): Board | undefined => {
 			case "tel":
 			case "e":
 			case "m":
+			case "gz":
 			case "sp":
 				if (nonDoctors[row[1]]) {
 					board[row[0]]!.push(nonDoctors[row[1]]);

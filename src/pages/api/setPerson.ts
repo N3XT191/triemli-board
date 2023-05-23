@@ -19,7 +19,7 @@ export default function setPerson(req: NextApiRequest, res: NextApiResponse) {
 	if (!fs.existsSync(fullPath)) {
 		fs.writeFileSync(
 			fullPath,
-			"1,\npf1,\n3,\n4,\n5,\n6,\n8,\npf2,\n7,\nhc,\ntag,\ne,\nm,\nsp,\ntel,\n"
+			"1,\npf1,\n3,\n4,\n5,\n6,\n8,\npf2,\n7,\nhc,\ntag,\ne,\nm,\nsp,\ntel,\ngz,\n"
 		);
 	}
 

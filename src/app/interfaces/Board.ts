@@ -13,6 +13,7 @@ export interface Board {
 	pf2?: Room;
 	hc?: Person;
 	tag?: Person;
+	gz: Person[];
 	tel: Person[];
 	e: Person[];
 	m: Person[];
