@@ -20,6 +20,7 @@
     "headlessui": "^0.0.0",
     "moment": "^2.29.4",
     "next": "13.4.3",
+    "nextjs-basic-auth-middleware": "^3.1.0",
     "pdfjs": "^2.4.7",
     "pdfjs-dist": "^3.6.172",
     "pdfreader": "^3.0.0",
