@@ -9,7 +9,7 @@ const nonDoctorsArray: Person[] = [
 
 	{ name: "Susanne Ulrich", title: "", phone: 0, id: "susanne" },
 	{ name: "Yasmine Huber", title: "", phone: 0, id: "yasmine" },
-	{ name: "Vilade Rrudhani", title: "", phone: 0, id: "vildane" },
+	{ name: "Vildane Rrudhani", title: "", phone: 0, id: "vildane" },
 
 	{ name: "Stefanie ", title: "", phone: 64728, id: "stefanie" },
 	{ name: "Nicole ", title: "", phone: 64728, id: "nicole" },
