@@ -1,3 +1,4 @@
+import { getBoard } from "@/util/getBoard";
 import { PencilSquareIcon } from "@heroicons/react/20/solid";
 import moment from "moment";
 import "moment/locale/de";
@@ -13,9 +14,10 @@ export default function BoardLayout({
 }) {
 	const day = moment(params?.day);
 	const weekday = day.day();
+	const roomData = getBoard(params?.day!);
 	return (
-		<main className="flex min-h-screen flex-col items-center justify-start p-6 text-3xl relative">
-			<div className="inline-grid grid-rows-[auto_auto_auto] grid-cols-2 gap-[20px] gap-x-[100px] min-w-[1200px]">
+		<main className="flex min-h-screen flex-col items-center justify-between p-2 text-3xl relative h-full">
+			<div className="inline-grid grid-rows-[auto_auto_auto_auto] grid-cols-2 gap-[20px] gap-x-[100px] min-w-[1200px] h-full">
 				<div className="col-span-2  col-start-1 row-start-1   flex justify-center items-center flex-col ">
 					<h2 className="text-7xl font-extralight mb-2">Ambi Chirurgie</h2>
 					<div className="flex justify-between mb-4 mt-5">

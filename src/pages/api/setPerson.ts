@@ -13,13 +13,13 @@ export default function setPerson(req: NextApiRequest, res: NextApiResponse) {
 		return;
 	}
 
-	const postsDirectory = join(process.cwd(), "src", "app", "data", "days");
+	const postsDirectory = join(process.cwd(), "src", "data", "days");
 	const fullPath = join(postsDirectory, `${date}.csv`);
 
 	if (!fs.existsSync(fullPath)) {
 		fs.writeFileSync(
 			fullPath,
-			"1,\npf1,\n3,\n4,\n5,\n6,\n8,\npf2,\n7,\nhc,\ntag,\ne,\nm,\nsp,\ntel,\ngz,\n"
+			"1,\npf1,\n3,\n4,\n5,\n6,\n8,\npf2,\n7,\nhc,\ntag,\ne,\nm,\nsp,\ntel,\ngz,\ncomment,\n"
 		);
 	}
 

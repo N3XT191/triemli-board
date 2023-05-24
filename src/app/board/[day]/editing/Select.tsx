@@ -3,8 +3,8 @@
 import { Fragment, useState } from "react";
 import { Listbox, Transition } from "@headlessui/react";
 import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
-import { doctors, nonDoctors } from "@/app/data/people";
-import { Person } from "@/app/interfaces/Person";
+import { doctors, nonDoctors } from "@/data/people";
+import { Person } from "@/interfaces/Person";
 
 function classNames(...classes: string[]) {
 	return classes.filter(Boolean).join(" ");

@@ -1,24 +1,38 @@
 export const runtime = "nodejs";
 
-import { getRoom } from "@/app/util/getRoom";
-import { Board } from "@/app/interfaces/Board";
+import { getBoard } from "@/util/getBoard";
+import { Board } from "@/interfaces/Board";
 import { makeBoard } from "./Board";
 import Link from "next/link";
-import { PencilSquareIcon } from "@heroicons/react/20/solid";
+import { CogIcon, PencilSquareIcon } from "@heroicons/react/20/solid";
 import moment from "moment";
+import config from "@/data/config.json";
 
 export default function Board({ params }: { params?: { day: string } }) {
-	const roomData = getRoom(params?.day!);
+	const roomData = getBoard(params?.day!);
 	const day = moment(params?.day);
 	const weekday = day.day();
 	return (
 		<>
 			<Link
 				href={"/board/" + day.format("YYYY-MM-DD") + "/editing"}
-				className="top-10 right-10 absolute"
+				className="top-8 right-8 absolute"
 			>
 				<PencilSquareIcon className="  h-10 w-10 " />
 			</Link>
+			<Link href={"/settings"} className="top-8 right-20 absolute">
+				<CogIcon className="  h-10 w-10 " />
+			</Link>
+			<div className="absolute bottom-0 left-0 p-4   w-full flex justify-between">
+				{roomData ? (
+					<div>
+						{roomData.comment ? roomData.comment : config.defaultComment}
+					</div>
+				) : (
+					<div />
+				)}
+				<div>Securitas: {config.securitasNumber}</div>
+			</div>
 			{roomData ? (
 				makeBoard(roomData)
 			) : (

@@ -2,14 +2,15 @@ import { CheckCircleIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
 import moment from "moment";
 import Select from "./Select";
-import { Person } from "@/app/interfaces/Person";
-import { getRoom } from "@/app/util/getRoom";
+import { Person } from "@/interfaces/Person";
+import { getBoard } from "@/util/getBoard";
+import InputField from "../../../components/InputField";
 
 export default function EditingBoard({ params }: { params?: { day: string } }) {
-	const roomData = getRoom(params?.day!);
+	const roomData = getBoard(params?.day!);
 
 	const day = moment(params?.day);
-	const weekday = day.day();
+	const dateString = day.format("YYYY-MM-DD");
 
 	const makeSelector = (
 		doctor: boolean,
@@ -25,7 +26,7 @@ export default function EditingBoard({ params }: { params?: { day: string } }) {
 						doctor={doctor}
 						person={person}
 						roomCode={roomCode}
-						date={day.format("YYYY-MM-DD")}
+						date={dateString}
 					/>
 				</div>
 			</div>
@@ -34,10 +35,7 @@ export default function EditingBoard({ params }: { params?: { day: string } }) {
 
 	return (
 		<>
-			<Link
-				href={"/board/" + day.format("YYYY-MM-DD")}
-				className="top-10 right-10 absolute"
-			>
+			<Link href={"/board/" + dateString} className="top-8 right-8 absolute">
 				<CheckCircleIcon className="h-10 w-10 " />
 			</Link>
 			<div className="row-start-2  col-start-1  flex flex-col divide-y-2 divide-gray-300 divide">
@@ -64,6 +62,13 @@ export default function EditingBoard({ params }: { params?: { day: string } }) {
 				{makeSelector(false, roomData?.["tel"][0], "Telefon", "tel")}
 				{makeSelector(false, roomData?.["sp"][0], "Sprechstunde", "sp")}
 			</div>
+			<InputField
+				roomCode="comment"
+				endpoint="setPerson"
+				date={dateString}
+				defaultValue={roomData?.["comment"]}
+				label={"Kommentar"}
+			/>
 		</>
 	);
 }

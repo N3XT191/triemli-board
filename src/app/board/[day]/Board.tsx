@@ -1,6 +1,6 @@
-import { Board } from "@/app/interfaces/Board";
-import { Person } from "@/app/interfaces/Person";
-import { Room } from "@/app/interfaces/Room";
+import { Board } from "@/interfaces/Board";
+import { Person } from "@/interfaces/Person";
+import { Room } from "@/interfaces/Room";
 const makeRoom = (room: Room | undefined) => {
 	if (room && room.person)
 		return (
@@ -22,10 +22,17 @@ const makeOther = (label: string, people: Person[]) => {
 	if (Array.isArray(people) && people.length > 0)
 		return (
 			<div className="flex w-full  p-2">
-				<div className="w-[300px] font-bold">{label}</div>
+				<div className="min-w-[200px] pr-2  font-bold">{label}</div>
 				<div className="">
 					{people.map((p) => (
-						<div key={p.name}>{p.name}</div>
+						<div key={p.id} className="flex justify-between w-full">
+							<div key={p.name}>{p.name}</div>
+							{p.phone ? (
+								<div className="text-xl font-bold pl-[20px] pt-[2px]">
+									{p.phone}
+								</div>
+							) : undefined}
+						</div>
 					))}
 				</div>
 			</div>
@@ -47,12 +54,14 @@ export const makeBoard = (roomData: Board) => {
 				{makeRoom(roomData[5])}
 				{makeRoom(roomData[6])}
 			</div>
-			<div className="row-start-3  col-start-1  flex flex-col divide-y-2 divide-gray-300">
-				{roomData["tag"]
-					? makeOther("Tagesarzt", [roomData["tag"]])
-					: undefined}
-				{roomData["hc"] ? makeOther("HC", [roomData["hc"]]) : undefined}
-				{makeOther("GZ", roomData["gz"])}
+			<div className="row-start-3  col-start-1  flex flex-col justify-between h-">
+				<div className="flex flex-col divide-y-2 divide-gray-300">
+					{roomData["tag"]
+						? makeOther("Tagesarzt", [roomData["tag"]])
+						: undefined}
+					{roomData["hc"] ? makeOther("HC", [roomData["hc"]]) : undefined}
+					{makeOther("GZ", roomData["gz"])}
+				</div>
 			</div>
 			<div className="row-start-3  col-start-2  flex flex-col divide-y-2 divide-gray-300">
 				{makeOther("Empfang", roomData["e"])}

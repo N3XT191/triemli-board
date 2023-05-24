@@ -4,8 +4,8 @@ import { Board } from "../interfaces/Board";
 import { doctors, nonDoctors } from "../data/people";
 import { Person } from "../interfaces/Person";
 
-export const getRoom = (date: string): Board | undefined => {
-	const postsDirectory = join(process.cwd(), "src", "app", "data", "days");
+export const getBoard = (date: string): Board | undefined => {
+	const postsDirectory = join(process.cwd(), "src", "data", "days");
 	const fullPath = join(postsDirectory, `${date}.csv`);
 
 	if (!fs.existsSync(fullPath)) {
@@ -16,7 +16,14 @@ export const getRoom = (date: string): Board | undefined => {
 	const rows = fileContents.split("\n");
 	const splitRows = rows.map((row) => row.split(","));
 
-	const board: Board = { tel: [] as Person[], e: [], sp: [], m: [], gz: [] };
+	const board: Board = {
+		tel: [] as Person[],
+		e: [],
+		sp: [],
+		m: [],
+		gz: [],
+		comment: "",
+	};
 	splitRows.forEach((row) => {
 		switch (row[0]) {
 			case "1":
@@ -52,6 +59,9 @@ export const getRoom = (date: string): Board | undefined => {
 				if (nonDoctors[row[1]]) {
 					board[row[0]]!.push(nonDoctors[row[1]]);
 				}
+				break;
+			case "comment":
+				board["comment"] = row[1];
 		}
 	});
 

@@ -18,4 +18,5 @@ export interface Board {
 	e: Person[];
 	m: Person[];
 	sp: Person[];
+	comment: string;
 }
