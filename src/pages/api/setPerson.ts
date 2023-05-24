@@ -9,7 +9,7 @@ export default function setPerson(req: NextApiRequest, res: NextApiResponse) {
 	if (!date || !roomCode) {
 		res
 			.status(400)
-			.json({ message: "Error - missing date or RoomCode in body" });
+			.json({ message: "Error - missing date or RoomCode in query" });
 		return;
 	}
 

@@ -6,12 +6,14 @@ export default function InputField({
 	roomCode,
 	endpoint,
 	label,
+	setting,
 }: {
 	date?: string;
 	defaultValue: string | undefined;
 	roomCode?: string;
 	endpoint: string;
 	label?: string;
+	setting?: string;
 }) {
 	return (
 		<div>
@@ -33,7 +35,7 @@ export default function InputField({
 					defaultValue={defaultValue}
 					onChange={(e) =>
 						fetch(
-							`/api/${endpoint}?roomCode=${roomCode}&date=${date}&person=${e.target.value}`
+							`/api/${endpoint}?roomCode=${roomCode}&date=${date}&person=${e.target.value}&setting=${setting}&value=${e.target.value}`
 						)
 					}
 				/>

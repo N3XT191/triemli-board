@@ -14,14 +14,16 @@ export default function Settings() {
 				<InputField
 					defaultValue={config.defaultComment}
 					roomCode={undefined}
-					endpoint={""}
+					endpoint={"setSettings"}
 					label="Kommentar"
+					setting="defaultComment"
 				/>
 				<InputField
 					defaultValue={"" + config.securitasNumber}
 					roomCode={undefined}
-					endpoint={""}
+					endpoint={"setSettings"}
 					label="Securitas Nummer"
+					setting="securitasNumber"
 				/>
 			</div>
 		</div>
