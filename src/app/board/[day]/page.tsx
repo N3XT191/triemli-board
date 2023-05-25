@@ -1,17 +1,20 @@
 export const runtime = "nodejs";
 
 import { getBoard } from "@/util/getBoard";
+import { getConfig } from "@/util/getConfig";
 import { Board } from "@/interfaces/Board";
 import { makeBoard } from "./Board";
 import Link from "next/link";
 import { CogIcon, PencilSquareIcon } from "@heroicons/react/20/solid";
 import moment from "moment";
-import config from "@/data/config.json";
 
-export default function Board({ params }: { params?: { day: string } }) {
+export default async function Board({ params }: { params?: { day: string } }) {
 	const roomData = getBoard(params?.day!);
 	const day = moment(params?.day);
 	const weekday = day.day();
+
+	const config = getConfig();
+
 	return (
 		<>
 			<Link

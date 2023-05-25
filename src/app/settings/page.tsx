@@ -1,9 +1,11 @@
 import Link from "next/link";
 import InputField from "../components/InputField";
-import config from "@/data/config.json";
 import { CheckCircleIcon } from "@heroicons/react/20/solid";
 
-export default function Settings() {
+import { getConfig } from "@/util/getConfig";
+
+export default async function Settings() {
+	const config = getConfig();
 	return (
 		<div className="w-[600px] p-20">
 			<Link href={"/"} className="top-8 right-8 absolute">
