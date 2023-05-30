@@ -2,7 +2,7 @@ import { join } from "path";
 import fs from "fs";
 import { NextApiRequest, NextApiResponse } from "next";
 
-export default function setPerson(req: NextApiRequest, res: NextApiResponse) {
+export default function setPersonForDay(req: NextApiRequest, res: NextApiResponse) {
 	const { date, person, roomCode } = req.query;
 	console.log(date, person, roomCode);
 

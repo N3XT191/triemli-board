@@ -1,8 +1,9 @@
 import Link from "next/link";
-import InputField from "../components/InputField";
+import InputFieldWithSet from "../components/InputFieldWithSet";
 import { CheckCircleIcon } from "@heroicons/react/20/solid";
 
 import { getConfig } from "@/util/getConfig";
+import AddPerson from "../components/AddPerson";
 
 export default async function Settings() {
 	const config = getConfig();
@@ -13,20 +14,21 @@ export default async function Settings() {
 			</Link>
 			<div className=" grid gap-4">
 				<h2 className="text-4xl pb-4">Einstellungen</h2>
-				<InputField
+				<InputFieldWithSet
 					defaultValue={config.defaultComment}
 					roomCode={undefined}
 					endpoint={"setSettings"}
 					label="Kommentar"
 					setting="defaultComment"
 				/>
-				<InputField
+				<InputFieldWithSet
 					defaultValue={"" + config.securitasNumber}
 					roomCode={undefined}
 					endpoint={"setSettings"}
 					label="Securitas Nummer"
 					setting="securitasNumber"
 				/>
+				<AddPerson />
 			</div>
 		</div>
 	);

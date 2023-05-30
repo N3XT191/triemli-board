@@ -1,10 +1,18 @@
 import { CheckCircleIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
 import moment from "moment";
-import Select from "./Select";
+import SelectPerson from "./SelectPerson";
 import { Person } from "@/interfaces/Person";
 import { getBoard } from "@/util/getBoard";
-import InputField from "../../../components/InputField";
+import InputFieldWithSet from "../../../components/InputFieldWithSet";
+import { getPeople } from "@/util/getPeople";
+
+const emptyPerson = {
+	name: "- leer -",
+	title: "",
+	phone: 0,
+	id: undefined,
+};
 
 export default function EditingBoard({ params }: { params?: { day: string } }) {
 	const roomData = getBoard(params?.day!);
@@ -18,12 +26,18 @@ export default function EditingBoard({ params }: { params?: { day: string } }) {
 		label: string,
 		roomCode: string
 	) => {
+		const { doctors, nonDoctors } = getPeople();
+
+		const people = [
+			emptyPerson,
+			...(doctor ? Object.values(doctors) : Object.values(nonDoctors)),
+		];
 		return (
 			<div className="flex items-center justify-between pb-2">
 				<div className="w-[80px] font-bold">{label}</div>
 				<div className="w-[250px]">
-					<Select
-						doctor={doctor}
+					<SelectPerson
+						people={people}
 						person={person}
 						roomCode={roomCode}
 						date={dateString}
@@ -62,7 +76,7 @@ export default function EditingBoard({ params }: { params?: { day: string } }) {
 				{makeSelector(false, roomData?.["tel"][0], "Telefon", "tel")}
 				{makeSelector(false, roomData?.["sp"][0], "Sprechstunde", "sp")}
 			</div>
-			<InputField
+			<InputFieldWithSet
 				roomCode="comment"
 				endpoint="setPerson"
 				date={dateString}

@@ -1,10 +1,11 @@
 import { join } from "path";
 import fs from "fs";
 import { Board } from "../interfaces/Board";
-import { doctors, nonDoctors } from "../data/people";
 import { Person } from "../interfaces/Person";
+import { getPeople } from "./getPeople";
 
 export const getBoard = (date: string): Board | undefined => {
+	const { doctors, nonDoctors } = getPeople();
 	const postsDirectory = join(process.cwd(), "src", "data", "days");
 	const fullPath = join(postsDirectory, `${date}.csv`);
 
