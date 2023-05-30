@@ -37,6 +37,7 @@ const doctorsArray: Person[] = [
 	{ name: "Dr. Bauchspiess", title: "LA", phone: 64719, id: "bauchspiess" },
 	{ name: "Berfin Caliskan", title: "AA", phone: 64118, id: "caliskan" },
 	{ name: "Dr. Sproedt", title: "AA", phone: 72960, id: "sproedt" },
+	{ name: "Dr. Kati Haslinger", title: "AA", phone: 72960, id: "haslinger" },
 ];
 
 export const doctors = Object.fromEntries(
