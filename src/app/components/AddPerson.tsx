@@ -17,7 +17,7 @@ export default function AddPerson({}: {}) {
 		<div>
 			<h2 className="text-2xl font-bold mt-8">Person hinzufügen</h2>
 			<div className="flex mb-4">
-				<div className="w-[100px] mr-4">
+				<div className="w-[120px] mr-4">
 					<Select
 						options={["Ja", "Nein"]}
 						onChange={(value) => setDoctor(value === "Ja")}
@@ -25,15 +25,15 @@ export default function AddPerson({}: {}) {
 						defaultValue="Nein"
 					/>
 				</div>
-				<div className="w-[100px] mr-4">
+				<div className="w-[120px] mr-4">
 					<InputFieldWithOnChange
 						placeholder={"Titel"}
-						label="Titel"
+						label="Titel (AA/OA etc.)"
 						onChange={(e) => setTitle(e.target.value)}
 						value={title}
 					/>
 				</div>
-				<div className=" w-[100px]">
+				<div className=" w-[120px]">
 					<InputFieldWithOnChange
 						placeholder={"Telefon"}
 						label="Telefon"

@@ -3,7 +3,6 @@ import InputFieldWithSet from "../components/InputFieldWithSet";
 import { CheckCircleIcon } from "@heroicons/react/20/solid";
 
 import { getConfig } from "@/util/getConfig";
-import AddPerson from "../components/AddPerson";
 
 export default async function Settings() {
 	const config = getConfig();
@@ -28,7 +27,6 @@ export default async function Settings() {
 					label="Securitas Nummer"
 					setting="securitasNumber"
 				/>
-				<AddPerson />
 			</div>
 		</div>
 	);
