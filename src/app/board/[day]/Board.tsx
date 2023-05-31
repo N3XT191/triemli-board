@@ -57,7 +57,7 @@ export const makeBoard = (roomData: Board) => {
 			<div className="row-start-3  col-start-1  flex flex-col justify-between h-">
 				<div className="flex flex-col divide-y-2 divide-gray-300">
 					{roomData["tag"]
-						? makeOther("Tagesarzt", [roomData["tag"]])
+						? makeOther("Tagesarzt", [{ ...roomData["tag"], phone: 64903 }])
 						: undefined}
 					{roomData["hc"] ? makeOther("HC", [roomData["hc"]]) : undefined}
 					{makeOther("GZ", roomData["gz"])}
