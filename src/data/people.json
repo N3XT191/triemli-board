@@ -125,6 +125,12 @@
             "title": "AA",
             "phone": 64146,
             "id": "haslinger"
+        },
+        "dr._kruspi": {
+            "name": "Dr. Kruspi",
+            "phone": "?",
+            "title": "OA",
+            "id": "dr._kruspi"
         }
     },
     "nonDoctors": {
