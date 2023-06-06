@@ -18,11 +18,6 @@ export const getBoard = (date: string): Board | undefined => {
 	const splitRows = rows.map((row) => row.split(","));
 
 	const board: Board = {
-		tel: [] as Person[],
-		e: [],
-		sp: [],
-		m: [],
-		gz: [],
 		comment: "",
 	};
 	splitRows.forEach((row) => {
@@ -53,12 +48,15 @@ export const getBoard = (date: string): Board | undefined => {
 				board[row[0]] = doctors[row[1]];
 				break;
 			case "tel":
+			case "tel2":
 			case "e":
+			case "e2":
 			case "m":
+			case "m2":
 			case "gz":
 			case "sp":
 				if (nonDoctors[row[1]]) {
-					board[row[0]]!.push(nonDoctors[row[1]]);
+					board[row[0]] = nonDoctors[row[1]];
 				}
 				break;
 			case "comment":

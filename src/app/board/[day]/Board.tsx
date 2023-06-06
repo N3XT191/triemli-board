@@ -18,22 +18,52 @@ const makeRoom = (room: Room | undefined) => {
 			</div>
 		);
 };
-const makeOther = (label: string, people: Person[]) => {
-	if (Array.isArray(people) && people.length > 0)
+const makeOther = (label: string, person: Person | undefined) => {
+	if (person)
 		return (
 			<div className="flex w-full  p-2">
-				<div className="min-w-[200px] pr-2  font-bold">{label}</div>
-				<div className="">
-					{people.map((p) => (
-						<div key={p.id} className="flex justify-between w-full">
-							<div key={p.name}>{p.name}</div>
-							{p.phone ? (
+				<div className="min-w-[210px] pr-2  font-bold">{label}</div>
+				<div className="flex justify-between w-full">
+					<div>{person.name}</div>
+					{person.phone ? (
+						<div className="text-xl font-bold pl-[20px] pt-[2px]">
+							{person.phone}
+						</div>
+					) : undefined}
+				</div>
+			</div>
+		);
+};
+const makeOtherDouble = (
+	label: string,
+	person1: Person | undefined,
+	person2: Person | undefined
+) => {
+	if (person1 || person2)
+		return (
+			<div className="flex w-full  p-2">
+				<div className="min-w-[210px] pr-2  font-bold">{label}</div>
+				<div className="flex flex-col">
+					{person1 ? (
+						<div className="flex justify-between w-full">
+							<div>{person1.name}</div>
+							{person1.phone ? (
 								<div className="text-xl font-bold pl-[20px] pt-[2px]">
-									{p.phone}
+									{person1.phone}
 								</div>
 							) : undefined}
 						</div>
-					))}
+					) : undefined}
+					{person2 ? (
+						<div className="flex justify-between w-full">
+							<div>{person2.name}</div>
+							{person2.phone ? (
+								<div className="text-xl font-bold pl-[20px] pt-[2px]">
+									{person2.phone}
+								</div>
+							) : undefined}
+						</div>
+					) : undefined}
 				</div>
 			</div>
 		);
@@ -57,16 +87,16 @@ export const makeBoard = (roomData: Board) => {
 			<div className="row-start-3  col-start-1  flex flex-col justify-between h-">
 				<div className="flex flex-col divide-y-2 divide-gray-300">
 					{roomData["tag"]
-						? makeOther("Tagesarzt", [{ ...roomData["tag"], phone: 64903 }])
+						? makeOther("Tagesarzt", { ...roomData["tag"], phone: 64903 })
 						: undefined}
-					{roomData["hc"] ? makeOther("HC", [roomData["hc"]]) : undefined}
+					{roomData["hc"] ? makeOther("HC", roomData["hc"]) : undefined}
 					{makeOther("GZ", roomData["gz"])}
 				</div>
 			</div>
 			<div className="row-start-3  col-start-2  flex flex-col divide-y-2 divide-gray-300">
-				{makeOther("Empfang", roomData["e"])}
-				{makeOther("Mail", roomData["m"])}
-				{makeOther("Telefon", roomData["tel"])}
+				{makeOtherDouble("Empfang", roomData["e"], roomData["e2"])}
+				{makeOtherDouble("Mail", roomData["m"], roomData["m2"])}
+				{makeOtherDouble("Telefon", roomData["tel"], roomData["tel2"])}
 				{makeOther("Sprechstunde", roomData["sp"])}
 			</div>
 		</>

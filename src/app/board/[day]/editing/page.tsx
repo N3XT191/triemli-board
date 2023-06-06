@@ -37,9 +37,37 @@ export default function EditingBoard({ params }: { params?: { day: string } }) {
 				<div className="w-[80px] font-bold">{label}</div>
 				<div className="w-[250px]">
 					<SelectPerson
-						people={people}
+						people={people.sort((a, b) => (a.name < b.name ? -1 : 1))}
 						person={person}
 						roomCode={roomCode}
+						date={dateString}
+					/>
+				</div>
+			</div>
+		);
+	};
+	const makeDoubleSelector = (
+		person: (Person | undefined)[] | undefined,
+		label: string,
+		roomCode: string
+	) => {
+		const { nonDoctors } = getPeople();
+
+		const people = [emptyPerson, ...Object.values(nonDoctors)];
+		return (
+			<div className="flex items-center justify-between pb-2">
+				<div className="w-[80px] font-bold">{label}</div>
+				<div className="w-[250px]">
+					<SelectPerson
+						people={people.sort((a, b) => (a.name < b.name ? -1 : 1))}
+						person={person?.[0]}
+						roomCode={roomCode}
+						date={dateString}
+					/>
+					<SelectPerson
+						people={people.sort((a, b) => (a.name < b.name ? -1 : 1))}
+						person={person?.[1]}
+						roomCode={roomCode + "2"}
 						date={dateString}
 					/>
 				</div>
@@ -68,13 +96,21 @@ export default function EditingBoard({ params }: { params?: { day: string } }) {
 			<div className="row-start-3  col-start-1  flex flex-col divide-y-2 divide-gray-300">
 				{makeSelector(true, roomData?.["tag"], "Tagesarzt", "tag")}
 				{makeSelector(true, roomData?.["hc"], "HC", "hc")}
-				{makeSelector(false, roomData?.["gz"]?.[0], "GZ", "gz")}
+				{makeSelector(false, roomData?.["gz"], "GZ", "gz")}
 			</div>
 			<div className="row-start-3  col-start-2  flex flex-col divide-y-2 divide-gray-300">
-				{makeSelector(false, roomData?.["e"][0], "Empfang", "e")}
-				{makeSelector(false, roomData?.["m"][0], "Mail", "m")}
-				{makeSelector(false, roomData?.["tel"][0], "Telefon", "tel")}
-				{makeSelector(false, roomData?.["sp"][0], "Sprechstunde", "sp")}
+				{makeDoubleSelector(
+					[roomData?.["e"], roomData?.["e2"]],
+					"Empfang",
+					"e"
+				)}
+				{makeDoubleSelector([roomData?.["m"], roomData?.["m2"]], "Mail", "m")}
+				{makeDoubleSelector(
+					[roomData?.["tel"], roomData?.["tel2"]],
+					"Telefon",
+					"tel"
+				)}
+				{makeSelector(false, roomData?.["sp"], "Sprechstunde", "sp")}
 			</div>
 			<InputFieldWithSet
 				roomCode="comment"
