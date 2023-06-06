@@ -20,7 +20,7 @@ export default function BoardLayout({
 			<div className="inline-grid grid-rows-[auto_auto_auto_auto] grid-cols-2 gap-[20px] gap-x-[100px] min-w-[1200px] h-full">
 				<div className="col-span-2  col-start-1 row-start-1   flex justify-center items-center flex-col ">
 					<h2 className="text-7xl font-extralight mb-2">Ambi Chirurgie</h2>
-					<div className="flex justify-between mb-4 mt-5">
+					<div className="flex justify-between mb-1 mt-3">
 						<Link
 							href={
 								"/board/" +
