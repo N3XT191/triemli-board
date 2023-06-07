@@ -23,13 +23,19 @@ export default async function Board({ params }: { params?: { day: string } }) {
 		<>
 			<div className="absolute top-8 right-8 flex gap-4">
 				<Link href={"/board/" + day.format("YYYY-MM-DD") + "/editing"}>
-					<PencilSquareIcon className="  h-10 w-10 " />
+					<PencilSquareIcon
+						className={`h-10 w-10 ${weekday === 5 ? "text-white" : undefined}`}
+					/>
 				</Link>
 				<Link href={"/settings"}>
-					<CogIcon className="  h-10 w-10 " />
+					<CogIcon
+						className={`h-10 w-10 ${weekday === 5 ? "text-white" : undefined}`}
+					/>
 				</Link>
 				<Link href={"/people"}>
-					<UserGroupIcon className="  h-10 w-10 " />
+					<UserGroupIcon
+						className={`h-10 w-10 ${weekday === 5 ? "text-white" : undefined}`}
+					/>
 				</Link>
 			</div>
 
