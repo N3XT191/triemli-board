@@ -11,8 +11,12 @@ export default function BoardLayout({
 	children: React.ReactNode;
 	params?: { day: string };
 }) {
+	const now = moment();
 	const day = moment(params?.day);
 	const weekday = day.day();
+	const time = now.hour() + now.minute() / 60 + now.second() / 3600;
+	const shiftProgres = ((time - 7.75) / 8.75) * 100;
+	console.log(time, shiftProgres);
 	const roomData = getBoard(params?.day!);
 	return (
 		<main className="flex min-h-screen flex-col items-center justify-between text-3xl relative h-full">
@@ -25,7 +29,7 @@ export default function BoardLayout({
 						<h2
 							className="text-7xl font-extralight w-full flex justify-center absolute left-0 top-0 right-0 bottom-0 items-center bg-white text-[--triemli-blue]  h-full  pt-1 pb-3"
 							style={{
-								clipPath: `inset(0 0 0 ${weekday * 20 - 2}%)`,
+								clipPath: `inset(0 0 0 ${shiftProgres}%)`,
 								transition: "clip-path 1s linear",
 							}}
 						>
