@@ -16,14 +16,14 @@ export default function BoardLayout({
 	const roomData = getBoard(params?.day!);
 	return (
 		<main className="flex min-h-screen flex-col items-center justify-between text-3xl relative h-full">
-			<div className="inline-grid grid-rows-[auto_auto_auto_auto] grid-cols-2 gap-[20px] gap-x-[100px] min-w-[1200px] h-full px-6">
+			<div className="inline-grid grid-rows-[auto_auto_auto_auto] grid-cols-2 gap-[10px] gap-x-[100px] min-w-[1200px] h-full px-6">
 				<div className="col-span-2  col-start-1 row-start-1   flex justify-center items-center flex-col ">
 					<div className="relative overflow-hidden w-screen flex justify-center border-b-[#0f06a1] border-b-4  ">
-						<h2 className="text-7xl font-extralight w-full flex justify-center items-center  text-white bg-[#0f06a1] h-full  pt-2 pb-4">
+						<h2 className="text-7xl font-extralight w-full flex justify-center items-center  text-white bg-[#0f06a1] h-full  pt-1 pb-3">
 							Ambi Chirurgie
 						</h2>
 						<h2
-							className="text-7xl font-extralight w-full flex justify-center absolute left-0 top-0 right-0 bottom-0 items-center bg-white text-[#0f06a1]  h-full  pt-2 pb-4"
+							className="text-7xl font-extralight w-full flex justify-center absolute left-0 top-0 right-0 bottom-0 items-center bg-white text-[#0f06a1]  h-full  pt-1 pb-3"
 							style={{
 								clipPath: `inset(0 0 0 ${weekday * 20 - 2}%)`,
 								transition: "clip-path 1s linear",
