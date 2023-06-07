@@ -21,21 +21,15 @@ export default async function Board({ params }: { params?: { day: string } }) {
 
 	return (
 		<>
-			<div className="absolute top-8 right-8 flex gap-4">
+			<div className="absolute top-7 right-7 flex gap-4 bg-white rounded-md">
 				<Link href={"/board/" + day.format("YYYY-MM-DD") + "/editing"}>
-					<PencilSquareIcon
-						className={`h-10 w-10 ${weekday === 5 ? "text-white" : undefined}`}
-					/>
+					<PencilSquareIcon className={`h-10 w-10`} />
 				</Link>
 				<Link href={"/settings"}>
-					<CogIcon
-						className={`h-10 w-10 ${weekday === 5 ? "text-white" : undefined}`}
-					/>
+					<CogIcon className={`h-10 w-10 `} />
 				</Link>
 				<Link href={"/people"}>
-					<UserGroupIcon
-						className={`h-10 w-10 ${weekday === 5 ? "text-white" : undefined}`}
-					/>
+					<UserGroupIcon className={`h-10 w-10 `} />
 				</Link>
 			</div>
 
