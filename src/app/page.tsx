@@ -1,4 +1,4 @@
-import moment from "moment";
+import moment from "moment-timezone";
 import { redirect } from "next/navigation";
 
 export default function Home() {

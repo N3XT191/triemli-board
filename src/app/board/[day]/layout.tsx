@@ -1,5 +1,5 @@
 import { getBoard } from "@/util/getBoard";
-import moment from "moment";
+import moment from "moment-timezone";
 import "moment/locale/de";
 
 import Link from "next/link";
@@ -11,7 +11,7 @@ export default function BoardLayout({
 	children: React.ReactNode;
 	params?: { day: string };
 }) {
-	const now = moment();
+	const now = moment().tz("Europe/Zurich");
 	const day = moment(params?.day);
 	const weekday = day.day();
 	const time = now.hour() + now.minute() / 60 + now.second() / 3600;

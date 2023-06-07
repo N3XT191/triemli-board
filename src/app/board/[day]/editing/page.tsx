@@ -1,6 +1,6 @@
 import { CheckCircleIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
-import moment from "moment";
+import moment from "moment-timezone";
 import SelectPerson from "./SelectPerson";
 import { Person } from "@/interfaces/Person";
 import { getBoard } from "@/util/getBoard";

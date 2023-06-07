@@ -10,7 +10,7 @@ import {
 	PencilSquareIcon,
 	UserGroupIcon,
 } from "@heroicons/react/20/solid";
-import moment from "moment";
+import moment from "moment-timezone";
 
 export default async function Board({ params }: { params?: { day: string } }) {
 	const roomData = getBoard(params?.day!);
