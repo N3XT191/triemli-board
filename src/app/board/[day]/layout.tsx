@@ -1,5 +1,4 @@
 import { getBoard } from "@/util/getBoard";
-import { PencilSquareIcon } from "@heroicons/react/20/solid";
 import moment from "moment";
 import "moment/locale/de";
 
@@ -16,10 +15,23 @@ export default function BoardLayout({
 	const weekday = day.day();
 	const roomData = getBoard(params?.day!);
 	return (
-		<main className="flex min-h-screen flex-col items-center justify-between p-2 text-3xl relative h-full">
-			<div className="inline-grid grid-rows-[auto_auto_auto_auto] grid-cols-2 gap-[20px] gap-x-[100px] min-w-[1200px] h-full">
+		<main className="flex min-h-screen flex-col items-center justify-between text-3xl relative h-full">
+			<div className="inline-grid grid-rows-[auto_auto_auto_auto] grid-cols-2 gap-[20px] gap-x-[100px] min-w-[1200px] h-full px-6">
 				<div className="col-span-2  col-start-1 row-start-1   flex justify-center items-center flex-col ">
-					<h2 className="text-7xl font-extralight mb-2">Ambi Chirurgie</h2>
+					<div className="relative overflow-hidden w-screen flex justify-center border-b-[#0f06a1] border-b-4  ">
+						<h2 className="text-7xl font-extralight w-full flex justify-center items-center  text-white bg-[#0f06a1] h-full  pt-2 pb-4">
+							Ambi Chirurgie
+						</h2>
+						<h2
+							className="text-7xl font-extralight w-full flex justify-center absolute left-0 top-0 right-0 bottom-0 items-center bg-white text-[#0f06a1]  h-full  pt-2 pb-4"
+							style={{
+								clipPath: `inset(0 0 0 ${weekday * 20 - 2}%)`,
+								transition: "clip-path 1s linear",
+							}}
+						>
+							Ambi Chirurgie
+						</h2>
+					</div>
 					<div className="flex justify-between mb-1 mt-3">
 						<Link
 							href={
