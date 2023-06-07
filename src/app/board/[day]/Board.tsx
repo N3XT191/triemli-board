@@ -71,12 +71,12 @@ const makeOtherDouble = (
 export const makeBoard = (roomData: Board) => {
 	return (
 		<>
-			<div className="row-start-2  col-start-1  flex flex-col divide-y-2 divide-gray-300 divide">
+			<div className="row-start-2  col-start-1  flex flex-col divide-y-2 divide-[--triemli-blue] divide">
 				{makeRoom(roomData[8])}
 				{makeRoom(roomData["pf2"])}
 				{makeRoom(roomData[7])}
 			</div>
-			<div className="row-start-2  col-start-2  flex flex-col divide-y-2 divide-gray-300">
+			<div className="row-start-2  col-start-2  flex flex-col divide-y-2 divide-[--triemli-blue]">
 				{makeRoom(roomData[1])}
 				{makeRoom(roomData["pf1"])}
 				{makeRoom(roomData[3])}
@@ -85,7 +85,7 @@ export const makeBoard = (roomData: Board) => {
 				{makeRoom(roomData[6])}
 			</div>
 			<div className="row-start-3  col-start-1  flex flex-col justify-between h-">
-				<div className="flex flex-col divide-y-2 divide-gray-300">
+				<div className="flex flex-col divide-y-2 divide-[--triemli-blue]">
 					{roomData["tag"]
 						? makeOther("Tagesarzt", { ...roomData["tag"], phone: 64903 })
 						: undefined}
@@ -93,7 +93,7 @@ export const makeBoard = (roomData: Board) => {
 					{makeOther("GZ", roomData["gz"])}
 				</div>
 			</div>
-			<div className="row-start-3  col-start-2  flex flex-col divide-y-2 divide-gray-300">
+			<div className="row-start-3  col-start-2  flex flex-col divide-y-2 divide-[--triemli-blue]">
 				{makeOtherDouble("Empfang", roomData["e"], roomData["e2"])}
 				{makeOtherDouble("Mail", roomData["m"], roomData["m2"])}
 				{makeOtherDouble("Telefon", roomData["tel"], roomData["tel2"])}
