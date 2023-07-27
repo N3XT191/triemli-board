@@ -1,228 +1,288 @@
 {
-	"doctors": {
-		"goerdeler": {
-			"name": "David Goerdeler",
-			"title": "AA",
-			"phone": 64134,
-			"id": "goerdeler"
-		},
-		"abo_youssef": {
-			"name": "Dr. Abo Youssef",
-			"title": "OA",
-			"phone": 64727,
-			"id": "abo_youssef"
-		},
-		"platz": {
-			"name": "Prof. Dr. Platz",
-			"title": "CA",
-			"phone": 64700,
-			"id": "platz"
-		},
-		"lance": {
-			"name": "Dr. L. Lance",
-			"title": "AA",
-			"phone": 64132,
-			"id": "lance"
-		},
-		"leimbacher": {
-			"name": "Dr. Leimbacher",
-			"title": "OA",
-			"phone": 73133,
-			"id": "leimbacher"
-		},
-		"klee": {
-			"name": "O. Klee",
-			"title": "AA",
-			"phone": 64145,
-			"id": "klee"
-		},
-		"dietrich": {
-			"name": "PD Dr. Dietrich",
-			"title": "CA",
-			"phone": 0,
-			"id": "dietrich"
-		},
-		"kilgus": {
-			"name": "Dr. Kilgus",
-			"title": "LA",
-			"phone": 64706,
-			"id": "kilgus"
-		},
-		"johannson": {
-			"name": "Dr. Johannson",
-			"title": "OA",
-			"phone": 64734,
-			"id": "johannson"
-		},
-		"iliev": {
-			"name": "P. Iliev",
-			"title": "AA",
-			"phone": 64135,
-			"id": "iliev"
-		},
-		"rosenkranz": {
-			"name": "Dr. Rosenkranz",
-			"title": "LA",
-			"phone": 64704,
-			"id": "rosenkranz"
-		},
-		"spagna": {
-			"name": "Dr. Spagna",
-			"title": "OA",
-			"phone": 64731,
-			"id": "spagna"
-		},
-		"müller": {
-			"name": "Dr. Müller",
-			"title": "LA",
-			"phone": 64710,
-			"id": "müller"
-		},
-		"löwe": {
-			"name": "Dr. Löwe",
-			"title": "OA",
-			"phone": 64724,
-			"id": "löwe"
-		},
-		"siegfried": {
-			"name": "Jana Siegfried",
-			"title": "AA",
-			"phone": 64105,
-			"id": "siegfried"
-		},
-		"aloji": {
-			"name": "Dr. Aloji",
-			"title": "OA",
-			"phone": 64732,
-			"id": "aloji"
-		},
-		"leipner": {
-			"name": "Julia Leipner",
-			"title": "AA",
-			"phone": 64101,
-			"id": "leipner"
-		},
-		"bauchspiess": {
-			"name": "Dr. Bauchspiess",
-			"title": "LA",
-			"phone": 64719,
-			"id": "bauchspiess"
-		},
-		"caliskan": {
-			"name": "Berfin Caliskan",
-			"title": "AA",
-			"phone": 64118,
-			"id": "caliskan"
-		},
-		"sproedt": {
-			"name": "Dr. Sproedt",
-			"title": "AA",
-			"phone": 72960,
-			"id": "sproedt"
-		},
-		"haslinger": {
-			"name": "Dr. Katharina Haslinger",
-			"title": "AA",
-			"phone": 64146,
-			"id": "haslinger"
-		},
-		"dr._kruspi": {
-			"name": "S. Kruspi",
-			"phone": 64735,
-			"title": "OA",
-			"id": "dr._kruspi"
-		},
-		"m._wiessmeier": {
-			"name": "M. Wiessmeier",
-			"phone": "64103",
-			"title": "AA",
-			"id": "m._wiessmeier"
-		},
-		"dr._sedlmayer": {
-			"name": "Dr. Sedlmayer",
-			"phone": "64722",
-			"title": "OA",
-			"id": "dr._sedlmayer"
-		},
-		"dr._ulrich": {
-			"name": "Dr. Ulrich",
-			"phone": "",
-			"title": "LA",
-			"id": "dr._ulrich"
-		}
-	},
-	"nonDoctors": {
-		"safete": {
-			"name": "Safete Sejdiu",
-			"title": "MPA",
-			"phone": 0,
-			"id": "safete"
-		},
-		"dea": {
-			"name": "Dea Shehu",
-			"title": "MPA",
-			"phone": 0,
-			"id": "dea"
-		},
-		"dorotea": {
-			"name": "Dorotea Gaeta",
-			"title": "MPA",
-			"phone": 0,
-			"id": "dorotea"
-		},
-		"tamara": {
-			"name": "Tamara Gertsch",
-			"title": "MPA",
-			"phone": 0,
-			"id": "tamara"
-		},
-		"maja": {
-			"name": "Maja Bürgi",
-			"title": "MPA",
-			"phone": 0,
-			"id": "maja"
-		},
-		"susanne": {
-			"name": "Susanne Ulrich",
-			"title": "",
-			"phone": 0,
-			"id": "susanne"
-		},
-		"yasmine": {
-			"name": "Yasmine Huber",
-			"title": "",
-			"phone": 0,
-			"id": "yasmine"
-		},
-		"vildane": {
-			"name": "Vildane Rrudhani",
-			"title": "",
-			"phone": 0,
-			"id": "vildane"
-		},
-		"stefanie": {
-			"name": "Stefanie Chiesura ",
-			"title": "64728",
-			"phone": 64728,
-			"id": "stefanie"
-		},
-		"nicole": {
-			"name": "Nicole Schmidlin ",
-			"title": "",
-			"phone": 64728,
-			"id": "nicole"
-		},
-		"gabriela": {
-			"name": "Gabriela Martini",
-			"title": "",
-			"phone": 67263,
-			"id": "gabriela"
-		},
-		"lea_geisser": {
-			"name": "Lea Geisser",
-			"phone": 0,
-			"title": "",
-			"id": "lea_geisser"
-		}
-	}
+    "doctors": {
+        "goerdeler": {
+            "name": "David Goerdeler",
+            "title": "AA",
+            "phone": 64134,
+            "id": "goerdeler"
+        },
+        "abo_youssef": {
+            "name": "Dr. Abo Youssef",
+            "title": "OA",
+            "phone": 64727,
+            "id": "abo_youssef"
+        },
+        "platz": {
+            "name": "Prof. Dr. Platz",
+            "title": "CA",
+            "phone": 64700,
+            "id": "platz"
+        },
+        "lance": {
+            "name": "Dr. L. Lance",
+            "title": "AA",
+            "phone": 64132,
+            "id": "lance"
+        },
+        "leimbacher": {
+            "name": "Dr. Leimbacher",
+            "title": "OA",
+            "phone": 73133,
+            "id": "leimbacher"
+        },
+        "klee": {
+            "name": "O. Klee",
+            "title": "AA",
+            "phone": 64145,
+            "id": "klee"
+        },
+        "dietrich": {
+            "name": "PD Dr. Dietrich",
+            "title": "CA",
+            "phone": 0,
+            "id": "dietrich"
+        },
+        "kilgus": {
+            "name": "Dr. Kilgus",
+            "title": "LA",
+            "phone": 64706,
+            "id": "kilgus"
+        },
+        "johannson": {
+            "name": "Dr. Johannson",
+            "title": "OA",
+            "phone": 64734,
+            "id": "johannson"
+        },
+        "iliev": {
+            "name": "P. Iliev",
+            "title": "AA",
+            "phone": 64135,
+            "id": "iliev"
+        },
+        "rosenkranz": {
+            "name": "Dr. Rosenkranz",
+            "title": "LA",
+            "phone": 64704,
+            "id": "rosenkranz"
+        },
+        "spagna": {
+            "name": "Dr. Spagna",
+            "title": "OA",
+            "phone": 64731,
+            "id": "spagna"
+        },
+        "müller": {
+            "name": "Dr. Müller",
+            "title": "LA",
+            "phone": 64710,
+            "id": "müller"
+        },
+        "löwe": {
+            "name": "Dr. Löwe",
+            "title": "OA",
+            "phone": 64724,
+            "id": "löwe"
+        },
+        "siegfried": {
+            "name": "Jana Siegfried",
+            "title": "AA",
+            "phone": 64105,
+            "id": "siegfried"
+        },
+        "aloji": {
+            "name": "Dr. Aloji",
+            "title": "OA",
+            "phone": 64732,
+            "id": "aloji"
+        },
+        "leipner": {
+            "name": "Julia Leipner",
+            "title": "AA",
+            "phone": 64101,
+            "id": "leipner"
+        },
+        "bauchspiess": {
+            "name": "Dr. Bauchspiess",
+            "title": "LA",
+            "phone": 64719,
+            "id": "bauchspiess"
+        },
+        "caliskan": {
+            "name": "Berfin Caliskan",
+            "title": "AA",
+            "phone": 64118,
+            "id": "caliskan"
+        },
+        "sproedt": {
+            "name": "Dr. Sproedt",
+            "title": "AA",
+            "phone": 72960,
+            "id": "sproedt"
+        },
+        "haslinger": {
+            "name": "Dr. Katharina Haslinger",
+            "title": "AA",
+            "phone": 64146,
+            "id": "haslinger"
+        },
+        "dr._kruspi": {
+            "name": "S. Kruspi",
+            "phone": 64735,
+            "title": "OA",
+            "id": "dr._kruspi"
+        },
+        "m._wiessmeier": {
+            "name": "M. Wiessmeier",
+            "phone": "64103",
+            "title": "AA",
+            "id": "m._wiessmeier"
+        },
+        "dr._sedlmayer": {
+            "name": "Dr. Sedlmayer",
+            "phone": "64722",
+            "title": "OA",
+            "id": "dr._sedlmayer"
+        },
+        "dr._ulrich": {
+            "name": "Dr. Ulrich",
+            "phone": "",
+            "title": "LA",
+            "id": "dr._ulrich"
+        },
+        "test": {
+            "name": "Test",
+            "phone": "1234",
+            "title": "LA",
+            "id": "test"
+        },
+        "t._fuchs": {
+            "name": "T. Fuchs",
+            "phone": "64113",
+            "title": "AA",
+            "id": "t._fuchs"
+        },
+        "kabelitz_metod": {
+            "name": "Kabelitz Metod",
+            "phone": "73022",
+            "title": "OA",
+            "id": "kabelitz_metod"
+        },
+        "kabelitz_method": {
+            "name": "Kabelitz Method",
+            "phone": "73022",
+            "title": "OA",
+            "id": "kabelitz_method"
+        },
+        "marie_meuwly": {
+            "name": "Marie Meuwly",
+            "phone": "64117",
+            "title": "AA",
+            "id": "marie_meuwly"
+        },
+        "dr._waltenspül": {
+            "name": "Dr. Waltenspül",
+            "phone": "00000",
+            "title": "OA",
+            "id": "dr._waltenspül"
+        },
+        "dr._ p. tuor": {
+            "name": "Dr.  P. Tuor",
+            "phone": "72511",
+            "title": "OA",
+            "id": "dr._ p. tuor"
+        },
+        "dr._brütsch": {
+            "name": "Dr. Brütsch",
+            "phone": "64112",
+            "title": "AA",
+            "id": "dr._brütsch"
+        },
+        "dr._graf": {
+            "name": "Dr. Graf",
+            "phone": "64736",
+            "title": "OA",
+            "id": "dr._graf"
+        }
+    },
+    "nonDoctors": {
+        "safete": {
+            "name": "Safete Sejdiu",
+            "title": "MPA",
+            "phone": 0,
+            "id": "safete"
+        },
+        "dea": {
+            "name": "Dea Shehu",
+            "title": "MPA",
+            "phone": 0,
+            "id": "dea"
+        },
+        "dorotea": {
+            "name": "Dorotea Gaeta",
+            "title": "MPA",
+            "phone": 0,
+            "id": "dorotea"
+        },
+        "tamara": {
+            "name": "Tamara Gertsch",
+            "title": "MPA",
+            "phone": 0,
+            "id": "tamara"
+        },
+        "maja": {
+            "name": "Maja Bürgi",
+            "title": "MPA",
+            "phone": 0,
+            "id": "maja"
+        },
+        "susanne": {
+            "name": "Susanne Ulrich",
+            "title": "",
+            "phone": 0,
+            "id": "susanne"
+        },
+        "yasmine": {
+            "name": "Yasmine Huber",
+            "title": "",
+            "phone": 0,
+            "id": "yasmine"
+        },
+        "vildane": {
+            "name": "Vildane Rrudhani",
+            "title": "",
+            "phone": 0,
+            "id": "vildane"
+        },
+        "stefanie": {
+            "name": "Stefanie Chiesura ",
+            "title": "64728",
+            "phone": 64728,
+            "id": "stefanie"
+        },
+        "nicole": {
+            "name": "Nicole Schmidlin ",
+            "title": "",
+            "phone": 64728,
+            "id": "nicole"
+        },
+        "gabriela": {
+            "name": "Gabriela Martini",
+            "title": "",
+            "phone": 67263,
+            "id": "gabriela"
+        },
+        "lea_geisser": {
+            "name": "Lea Geisser",
+            "phone": 0,
+            "title": "",
+            "id": "lea_geisser"
+        },
+        "m._-g. meuwly": {
+            "name": "M. -G. Meuwly",
+            "phone": "64117",
+            "title": "med. pract.",
+            "id": "m._-g. meuwly"
+        }
+    }
 }
