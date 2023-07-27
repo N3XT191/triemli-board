@@ -114,7 +114,7 @@ export default function EditingBoard({ params }: { params?: { day: string } }) {
 			</div>
 			<InputFieldWithSet
 				roomCode="comment"
-				endpoint="setPerson"
+				endpoint="setPersonForDay"
 				date={dateString}
 				defaultValue={roomData?.["comment"]}
 				label={"Kommentar"}
